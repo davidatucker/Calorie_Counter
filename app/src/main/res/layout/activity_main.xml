@@ -94,9 +94,7 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:layout_width="300dp"
-            android:layout_below="@+id/CalcButton"
-            android:onClick="calculate"/>
-
+            android:layout_below="@+id/CalcButton"/>
 
     </RelativeLayout>
 
