@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.calorie_counter.MainActivity">
+
+        <!--xxxxxx Spinner  xxxxxxxxxxxxxxxxxxxx        -->
+
+        <TextView
+            android:id="@+id/spin_label"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/selection_header" />
+
+        <Spinner
+            android:id="@+id/selection_spinner"
+            android:layout_below="@+id/spin_label"
+            android:layout_marginRight="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/spinner_prompt"
+            tools:listitem="@android:layout/simple_spinner_item" />
+            <!--  android:entries="@array/cities_array"-->
+
+
+        <!--xxxxxxxxxxxxx Time Spent xxxxxxxxxxxxxxxxxxxx-->
+
+        <TextView
+            android:id="@+id/label_time_spent"
+            style="@style/LabelStyle"
+            android:layout_below="@+id/selection_spinner"
+            android:layout_marginTop="20dp"
+            android:text="# of Minutes:" />
+
+        <EditText
+            android:id="@+id/amount_time_spent"
+            style="@style/InputStyle"
+            android:layout_toRightOf="@+id/label_time_spent"
+            android:layout_alignBottom="@+id/label_time_spent"
+            android:gravity="left"
+            android:hint="Minutes"
+            android:inputType="number" />
+
+        <!--xxxxxxxxxxxxx Weight xxxxxxxxxxxxxxxxxxxx-->
+
+        <TextView
+            android:id="@+id/label_weight"
+            style="@style/LabelStyle"
+
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/label_time_spent"
+            android:text="Your weight:" />
+
+
+        <EditText
+            android:id="@+id/weight"
+            style="@style/InputStyle"
+
+            android:layout_toRightOf="@+id/label_weight"
+            android:layout_alignBottom="@+id/label_weight"
+            android:gravity="left"
+            android:hint="Enter weight"
+            android:inputType="number" />
+
+        <!--xxxxxxxxxxxxx Button xxxxxxxxxxxxxxxxxxxx-->
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/CalcButton"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/label_weight"
+            android:textAllCaps="false"
+            android:text="Calculate Calories Used"
+            android:onClick="calculate"/>
+
+
+        <!--xxxxxxxxxxxxx Calorie Output Label xxxxxxxxxxxxxxxxxxxx-->
+
+        <TextView
+            android:id="@+id/Calories"
+            style="@style/OutputStyle"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_below="@+id/CalcButton"
+            android:onClick="calculate"/>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
