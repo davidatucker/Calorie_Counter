@@ -19,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textColor="#2c00c9"
             android:text="@string/selection_header" />
 
         <Spinner
@@ -65,11 +66,10 @@
         <EditText
             android:id="@+id/weight"
             style="@style/InputStyle"
-
             android:layout_toRightOf="@+id/label_weight"
             android:layout_alignBottom="@+id/label_weight"
             android:gravity="left"
-            android:hint="Enter weight"
+            android:hint="Pounds"
             android:inputType="number" />
 
         <!--xxxxxxxxxxxxx Button xxxxxxxxxxxxxxxxxxxx-->

@@ -13,6 +13,6 @@
     <string name="spinner_prompt">Choose an item</string>
     <string name="simple_header">Simple Spinner</string>
     <string name="dynamic_list_header">Dynamic list Spinner</string>
-    <string name="selection_header">Activity:</string>
+    <string name="selection_header">Choose an Activity:</string>
 
 </resources>

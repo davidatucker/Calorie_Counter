@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView( R.layout.activity_main );
 
         spinnerDropDownView =(Spinner)findViewById(R.id.selection_spinner);
-        //ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, spinnerValueHoldValue);
+
+        //looks at and sets the spinner_item.xml for formatting
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item,spinnerValueHoldValue);
         spinnerDropDownView.setAdapter(adapter);
 
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
             // Put the answer in the Answer box on the screen
             //CalorieTextView.setText(String.valueOf(CalUsed));
-            CalorieTextView.setText(String.format("Calories: %.2f", CalUsed));
+            CalorieTextView.setText(String.format("You burned %.0f calories", CalUsed));
 
         } catch( NumberFormatException nfe ) {
             // pop up an alert view here
